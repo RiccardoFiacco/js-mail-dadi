@@ -15,4 +15,9 @@ do{
 }while(!flag);
 
 let nome = email.slice(0, indexDot);
-console.log(nome)
+let result = invitati.includes(nome);
+if(result){
+    console.log("invitato");
+}else{
+    console.log("non invitato");
+}
