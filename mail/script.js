@@ -7,6 +7,7 @@ do{
     let control = email.includes("@");
     if(control){
         flag = true;
+        indexDot = email.indexOf("@");
     }else{
         alert("inserisci email nel formato indicato");
     }
