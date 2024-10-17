@@ -2,8 +2,9 @@ const invitati = ["Diego","Alessio","Alessandro","Leonardo","Matteo",
     "Samuel","Pietro","Nicolo","Ettore","Jacopo"]
 let flag = false;
 let indexDot;
+let email;
 do{
-    let email = prompt("inserisci la tua email(nome@dominio)");
+    email = prompt("inserisci la tua email(nome@dominio)");
     let control = email.includes("@");
     if(control){
         flag = true;
@@ -13,3 +14,5 @@ do{
     }
 }while(!flag);
 
+let nome = email.slice(0, indexDot);
+console.log(nome)
