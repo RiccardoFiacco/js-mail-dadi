@@ -15,7 +15,8 @@ do{
 }while(!flag);
 
 let nome = email.slice(0, indexDot);
-let result = invitati.includes(nome);
+let nomeCorretto = nome[0].toUpperCase() + nome.slice(1);
+let result = invitati.includes(nomeCorretto);
 if(result){
     console.log("invitato");
 }else{
