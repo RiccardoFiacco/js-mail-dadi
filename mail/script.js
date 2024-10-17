@@ -49,8 +49,8 @@ const emailArr = ["diego@gmail.com","alessio@gmail.com","alessandro@gmail.com",
 
 
 //terza soluzione
-let result;
-let control;
+let isInArray;
+let dotControl;
 let msg;
 do{
     //inserimento email
@@ -58,21 +58,21 @@ do{
     //controllo chiocciola per vedere se è un email
     for(let i=0;i<email.length; i++){
         if(email[i]==="@"){
-            control = true;
+            dotControl = true;
         }
     } 
     //se è un email faccio
-    if(control){
+    if(dotControl){
         //metto la mail in piccolo 
         email = email.toLowerCase();
         //controllo se email è presente nell'array
         for(let i=0;i<emailArr.length; i++){
-            if(emailCorretta===emailArr[i]){
-                result = true;
+            if(email===emailArr[i]){
+                isInArray = true;
             }
         } 
         //se il result è vero un messaggio senno un altro
-        if(result){
+        if(isInArray){
             msg= "puoi accedere";
         }else{
             msg= "non puoi accedere";
