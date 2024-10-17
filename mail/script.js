@@ -58,6 +58,7 @@ do{
     } 
 
     if(control){
+        email = email.toLowerCase();
         let emailCorretta= email[0].toUpperCase() + email.slice(1);
         for(let i=0;i<emailArr.length; i++){
             if(emailCorretta===emailArr[i]){
