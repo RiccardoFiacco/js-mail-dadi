@@ -28,12 +28,42 @@ const emailArr = ["Diego@gmail.com","Alessio@gmail.com","Alessandro@gmail.com",
     "Leonardo@gmail.com","Matteo@gmail.com","Samuel@gmail.com",
     "Pietro@gmail.com","Nicolo@gmail.com","Ettore@gmail.com","Jacopo@gmail.com"]
 
+// do{
+//     email = prompt("inserisci la tua email(nome@dominio)");
+//     let control = email.includes("@");
+//     if(control){
+//         let emailCorretta= email[0].toUpperCase() + email.slice(1);
+//         let result = emailArr.includes(emailCorretta);
+//         if(result){
+//             console.log("puoi accedere");
+//         }else{
+//             console.log("non puoi accedere");
+//         }
+//         flag = true;
+//     }else{
+//         alert("inserisci email nel formato indicato");
+//     }
+// }while(!flag);
+
+
+//terza soluzione
+let result;
+let control;
 do{
     email = prompt("inserisci la tua email(nome@dominio)");
-    let control = email.includes("@");
+    for(let i=0;i<email.length; i++){
+        if(email[i]==="@"){
+            control = true;
+        }
+    } 
+
     if(control){
         let emailCorretta= email[0].toUpperCase() + email.slice(1);
-        let result = emailArr.includes(emailCorretta);
+        for(let i=0;i<emailArr.length; i++){
+            if(emailCorretta===emailArr[i]){
+                result = true;
+            }
+        } 
         if(result){
             console.log("puoi accedere");
         }else{
