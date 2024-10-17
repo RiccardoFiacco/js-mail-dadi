@@ -5,3 +5,10 @@
 let dadoPc = Math.floor(Math.random()*6);
 let dadoPlayer = Math.floor(Math.random()*6);
 console.log(dadoPc, dadoPlayer);
+if (dadoPc==dadoPlayer){
+    console.log("Pareggio, ripete!");
+}else if(dadoPc>dadoPlayer){
+    console.log("Vince il Pc");
+}else{
+    console.log("Vince il Player");
+}
