@@ -13,8 +13,9 @@ let email;
 //         alert("inserisci email nel formato indicato");
 //     }
 // }while(!flag);
-
+// 
 // let nome = email.slice(0, indexDot);
+// nome = nome.toLowerCase();
 // let nomeCorretto = nome[0].toUpperCase() + nome.slice(1);
 // let result = invitati.includes(nomeCorretto);
 // if(result){
@@ -24,14 +25,15 @@ let email;
 // }
 
 //seconda soluzione
-const emailArr = ["Diego@gmail.com","Alessio@gmail.com","Alessandro@gmail.com",
-    "Leonardo@gmail.com","Matteo@gmail.com","Samuel@gmail.com",
-    "Pietro@gmail.com","Nicolo@gmail.com","Ettore@gmail.com","Jacopo@gmail.com"]
+const emailArr = ["diego@gmail.com","alessio@gmail.com","alessandro@gmail.com",
+    "leonardo@gmail.com","matteo@gmail.com","samuel@gmail.com",
+    "pietro@gmail.com","nicolo@gmail.com","ettore@gmail.com","jacopo@gmail.com"]
 
 // do{
 //     email = prompt("inserisci la tua email(nome@dominio)");
 //     let control = email.includes("@");
 //     if(control){
+//         email = email.toLowerCase();
 //         let emailCorretta= email[0].toUpperCase() + email.slice(1);
 //         let result = emailArr.includes(emailCorretta);
 //         if(result){
@@ -51,30 +53,37 @@ let result;
 let control;
 let msg;
 do{
+    //inserimento email
     email = prompt("inserisci la tua email(nome@dominio)");
+    //controllo chiocciola per vedere se è un email
     for(let i=0;i<email.length; i++){
         if(email[i]==="@"){
             control = true;
         }
     } 
-
+    //se è un email faccio
     if(control){
+        //metto la mail in piccolo 
         email = email.toLowerCase();
-        let emailCorretta= email[0].toUpperCase() + email.slice(1);
+        //controllo se email è presente nell'array
         for(let i=0;i<emailArr.length; i++){
             if(emailCorretta===emailArr[i]){
                 result = true;
             }
         } 
+        //se il result è vero un messaggio senno un altro
         if(result){
             msg= "puoi accedere";
         }else{
             msg= "non puoi accedere";
         }
+        //metto la flag a true per uscire dal ciclo, perche la mail inserita è nel formato corretto
         flag = true;
-    }else{
+
+    }else{ //altrimenti avviso di reinserire 
         alert("inserisci email nel formato indicato");
     }
-}while(!flag);
 
+}while(!flag);//faccio fino a che non è falsa
+//output
 console.log(msg);
