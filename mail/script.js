@@ -18,7 +18,7 @@ let nome = email.slice(0, indexDot);
 let nomeCorretto = nome[0].toUpperCase() + nome.slice(1);
 let result = invitati.includes(nomeCorretto);
 if(result){
-    console.log("invitato");
+    console.log("puoi accedere");
 }else{
-    console.log("non invitato");
+    console.log("non puoi accedere");
 }
