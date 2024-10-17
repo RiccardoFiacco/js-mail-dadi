@@ -49,6 +49,7 @@ const emailArr = ["Diego@gmail.com","Alessio@gmail.com","Alessandro@gmail.com",
 //terza soluzione
 let result;
 let control;
+let msg;
 do{
     email = prompt("inserisci la tua email(nome@dominio)");
     for(let i=0;i<email.length; i++){
@@ -66,12 +67,14 @@ do{
             }
         } 
         if(result){
-            console.log("puoi accedere");
+            msg= "puoi accedere";
         }else{
-            console.log("non puoi accedere");
+            msg= "non puoi accedere";
         }
         flag = true;
     }else{
         alert("inserisci email nel formato indicato");
     }
 }while(!flag);
+
+console.log(msg);
