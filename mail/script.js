@@ -1,10 +1,14 @@
 const invitati = ["Diego","Alessio","Alessandro","Leonardo","Matteo",
     "Samuel","Pietro","Nicolo","Ettore","Jacopo"]
-let flag = false
-
+let flag = false;
+let indexDot;
 do{
-    let email = prompt("inserisci la tua email");
+    let email = prompt("inserisci la tua email(nome@dominio)");
     let control = email.includes("@");
-    console.log(control);
-}while(flag);
+    if(control){
+        flag = true;
+    }else{
+        alert("inserisci email nel formato indicato");
+    }
+}while(!flag);
 
